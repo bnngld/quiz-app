@@ -1,0 +1,67 @@
+* {
+box-sizing: border-box;
+}
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    background: url('https://images.pexels.com/photos/1019338/nature-winter-snow-trees-1019338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center fixed;
+    background-size: cover; 
+    background-position: center;
+    min-height: 100%;
+  }
+  
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33%;
+  }
+
+  .col-6 {
+    width: 50%;
+
+  }
+
+  .col-12 {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  .js-option {
+    height: 40px;
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  footer p{
+    font-size: 15px;
+  }
+}

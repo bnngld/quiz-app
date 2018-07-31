@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: url('https://images.pexels.com/photos/1019338/nature-winter-snow-trees-1019338.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940') no-repeat center center fixed;
+  background-size: 100% 100%;
+}
+
+header {
+  width: 100%;
+}
+
+img {
+ height: 100px;
+ float: left;
+ margin: 5px;
+}
+
+.col-12 {
+  align-content: centered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to right,rgba(17, 17, 17, 0.158),rgba(255, 254, 254, 0.705));
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 15px;
+}
+
+.js-feedback, .js-results p{
+  align-content: centered;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.js-feedback p {
+  margin-top: 0;
+  font-weight: lighter;
+}
+
+.js-feedback button {
+  padding: 3px;
+  font-size: 15px;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 15px;
+}
+
+main button {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.623);
+  border: .5px solid black;
+  border-radius: 5px;
+  margin: 15px;
+  padding: 5px;
+  width: 55%;
+  height: 30px;
+  font-weight: normal;
+}
+
+main button:hover,
+main button:active,
+main button:focus
+{
+  color: white;
+  background-color: rgba(71, 236, 29, 0.007);
+}
+
+.js-option {
+  background-color: rgba(255, 255, 255, 0.685);
+  border-radius: 5px;
+  display: block;
+  border: 1px solid black;
+  padding: 7px;
+  margin: 25px;
+  text-align: left;
+  font-size: 15px;
+  height: 30px;
+  line-height: 15px;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: bold;
+  background:rgba(190, 190, 190, 0.555);
+}
+
+footer p{
+  display: inline-block;
+  padding: 10px;
+}
+
+.js-left {
+  float: left;
+}
+
+.js-right {
+  float: right;
+}
