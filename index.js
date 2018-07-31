@@ -118,10 +118,11 @@ let currentScore = 0;
 //creates question HTML in DOM
 function choiceForm() {
   if (currentQuestionNumber < quizData.length) {
-    return (`<div class="question-${currentQuestionNumber}">
+    return (`<section class="question-${currentQuestionNumber}">
       <h2>${quizData[currentQuestionNumber].question}</h2>
       <form role="form" class='js-question-form'>
         <fieldset>
+          <legend>Choices:</legend>
           <label class="js-option">
             <input type="radio" name="choices" required>
             <span>${quizData[currentQuestionNumber].choices[0]}</span>
@@ -141,7 +142,7 @@ function choiceForm() {
           <button type="submit" class="js-submit-button">Submit</button>
         </fieldset>
       </form>
-    </div>`);
+    </section>`);
 } else {
     resultsPage();
     startOver();
@@ -209,28 +210,29 @@ function incorrectAnswerSubmitted() {
 function incorrectAnswerFeedback(){
   let correctAnswer = quizData[currentQuestionNumber].answer;
   $('.js-container').html(
-    `<div class="js-feedback">
-      <h2>You got it wrong!<h2><p>The correct answer was:  "${correctAnswer}"</p>
+    `<section class="js-feedback">
+      <h2>You got it wrong!<h2>
+      <p>The correct answer was:  "${correctAnswer}"</p>
       <button class='js-next-button' type='button'>Next</button>
-    </div>`);
+    </section>`);
 }
 
 //feedback for correct answer
 function correctAnswerFeedback(){
   $('.js-container').html(
-    `<div class="js-feedback"><h2>You got it right!</h2>
+    `<section class="js-feedback"><h2>You got it right!</h2>
       <button class='js-next-button' type='button'>Next</button>
-    </div>`);
+    </section>`);
 }
 
 //results page
 function resultsPage(){
   $('.js-container').html(`
   <h1>Results</h1>
-  <div class="js-results">
+  <section class="js-results">
     <h2>Your Final Score Is: ${currentScore}/10</h2>
     <button class='js-restart-button' type='button'>Restart</button>
-  </div>`)
+  </section>`)
 };
 
 //reloads quizData

@@ -41,6 +41,11 @@ img {
   font-size: 15px;
 }
 
+legend {
+  font-weight: bold;
+  font-size: 12px;
+}
+
 .js-feedback p {
   margin-top: 0;
   font-weight: lighter;
